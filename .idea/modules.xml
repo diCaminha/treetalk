@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ichat-alura.iml" filepath="$PROJECT_DIR$/ichat-alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treetalk.iml" filepath="$PROJECT_DIR$/treetalk.iml" />
     </modules>
   </component>
 </project>

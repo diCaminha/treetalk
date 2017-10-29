@@ -1,10 +1,12 @@
 package br.com.caelum.ichat.activity;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import br.com.caelum.ichat.adapter.MensagemAdapter;
 import br.com.caelum.ichat.callback.EnviarMensagensCallback;
@@ -22,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private int idDoCliente;
-    private Button button;
+    private ImageButton button;
     private EditText editText;
     ChatService chatService;
 
@@ -37,20 +39,20 @@ public class MainActivity extends AppCompatActivity {
         this.listaDeMensagens = (ListView) findViewById(R.id.mensagem);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.0.208:8080/")
+                .baseUrl("http://192.168.1.10:8080/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         chatService = retrofit.create(ChatService.class);
         ouvirMensagens();
 
-        List<Mensagem> mensagens = mensagens = new ArrayList<>();
+        mensagens = new ArrayList<>();
 
         MensagemAdapter adapter = new MensagemAdapter(idDoCliente, mensagens, this);
 
         listaDeMensagens.setAdapter(adapter);
 
-        button = (Button) findViewById(R.id.btn_enviar);
+        button = (ImageButton) findViewById(R.id.btn_enviar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

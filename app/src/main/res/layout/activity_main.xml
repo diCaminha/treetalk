@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="#CFC">
 
     <ListView
             android:id="@+id/mensagem"
@@ -25,11 +26,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
 
-        <Button
+        <ImageButton
                 android:id="@+id/btn_enviar"
-                android:layout_weight="1"
                 android:text="Enviar"
-                android:layout_width="0dp"
+                android:layout_width="50dp"
+                android:src="@drawable/ic_action_name"
+                android:background="#FAA"
                 android:layout_height="wrap_content" />
     </LinearLayout>
 
